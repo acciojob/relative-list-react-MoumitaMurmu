@@ -3,16 +3,20 @@ import "../styles/App.css";
 
 class App extends Component {
   render() {
-    let relatives = ["relative1", "relative2", "relative3"];
+    const relatives = ["Manish", "Nitin", "Yatin"];
+
     return (
       <div id="main">
         <ol key="relativeList">
-          {relatives.map((relative, index) => (
-            <li key={"relativeListItem" + (index + 1)}>{relative}</li>
-          ))}
+          {relatives.map(renderList)}
         </ol>
       </div>
     );
+
+    // hoisting
+	function renderList(relativeName, i){
+       return <li key={`relativeListItem${i + 1}`}>{relativeName}</li>
+    }
   }
 }
 
