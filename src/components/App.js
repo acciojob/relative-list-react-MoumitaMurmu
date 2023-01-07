@@ -1,23 +1,16 @@
-import React, { Component, useState } from "react";
-import "../styles/App.css";
+import React from 'react'
 
-class App extends Component {
-  render() {
-    const relatives = ["Manish", "Nitin", "Yatin"];
-
-    return (
-      <div id="main">
-        <ol key="relativeList">
-          {relatives.map(renderList)}
+const App = () => {
+    const arr=["A","B","C"]
+  return (
+    <div>
+        <ol id='relativeList'>
+        {arr.map((el,i)=>
+            <li id={`relativeListItem${i+1}`} key={`relativeListItem${i+1}`}>{el}</li>
+        )}
         </ol>
-      </div>
-    );
-
-    // hoisting
-	function renderList(relativeName, i){
-       return <li key={`relativeListItem${i + 1}`}>{relativeName}</li>
-    }
-  }
+    </div>
+  )
 }
 
-export default App;
+export default App
