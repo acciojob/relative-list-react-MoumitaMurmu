@@ -1,4 +1,4 @@
 {
-    "testRepo": "relative-list-testcases",
-    "pathToFile": "__tests__/App.test.js"
+    "testRepo": "relative-list-solution",
+    "pathToFile": "cypress/integration/tests/test.spec.js"
 }
